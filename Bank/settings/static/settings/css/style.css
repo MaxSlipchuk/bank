@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.custom-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-header a{
+    text-decoration: none;
+}
+
+.top{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2%;
+    padding-right: 10%;
+    height: 50px;
+    background-color: rgb(219, 174, 129);
+    background-color: var(--header-bg-color);
+    font-size: 16px;
+}
+
+
+.top a{
+  color: rgb(255, 255, 255);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+select{
+  outline: none;
+  cursor: pointer;
+  width: 50px;
+  background-color: rgb(219, 174, 129);
+  border: none;
+  font-size: 16px;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-around;
+    height: 120px;
+    align-items: center;
+    padding: 1% 5%;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+}
+
+.bottom nav{
+  display: flex;
+  gap: 15px;
+  text-align: center;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  text-align: right;
+  gap: 10px;
+  padding-right: 7%;
+}
+
+.logo img{
+  height: 2em; /* Встановлення висоти в один раз розміру шрифту тексту */
+  /* padding-left: 1%; */
+}
+
+.bottom a{
+  /* color: #6C4D38; */
+  color: black;
+  font-size: 22px;
+  transition: all 0.6s;
+}
+
+.bottom nav a:hover{
+  color: #d8860b;
+}
+
+.bottom div a{
+    font-size: 50px;
+    font-weight:900;
+    color: #6C4D38;
+    line-height: 1; /* Висота тексту відносно розміру шрифту */
+
+}
+
+
+label {
+    width:50px;
+    height:20px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  label:after {
+    content: "";
+    width:18px;
+    height: 18px;
+    position: absolute;
+    top:1px;
+    left:1px;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  }
+  input {
+    width: 0;
+    height: 0;
+    /* visibility: hidden; */
+    display: none;
+  }
+
+  input:checked + label {
+    background: var(--header-bg-color-dark);
+}
+  input:checked + label:after {
+    left:49px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+  }
+  label, label:after {
+    transition: 0.3s
+  }
+
+  label:active:after{ 
+    width: 26px; 
+  }
+
+  input:checked + label + .top {
+    background:#242424;
+  }
+
+  label svg {
+	position: absolute;
+	width: 12px;
+	top:4px;
+	z-index: 100;
+}
+label svg.sun {
+	left:4px;
+	fill:#fff;
+	transition: 0.3s;
+}
+label svg.moon {
+	left:34px;
+	fill:#7e7e7e;
+	transition: 0.3s;
+}
+input:checked + label svg.sun {
+	fill:#7e7e7e;
+}
+input:checked + label svg.moon {
+	fill:#fff;
+}
+
+:root {
+    --header-bg-color: rgb(219, 174, 129);
+    --header-bg-color-dark: #242424;
+}
+
+footer{
+  background-color: black;
+}
+
+.f-div-logo{
+  display: flex;
+  align-items: center;
+  height: 20%;
+  padding: 2% 10%;
+}
+
+.f-div-logo a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 38px;
+  line-height: 1; /* Висота тексту відносно розміру шрифту */
+}
+
+.f-img-logo{
+  height: 60px;
+  padding-left: 1%;
+  height: 4em; /* Встановлення висоти в один раз розміру шрифту тексту */
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  padding-bottom: 6%;
+}
+
+.f-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  width: 15%;
+}
+
+.f-container h3{
+  font-family: 'Oswald', sans-serif;
+  color: #b2b2b2;
+  padding-bottom: 7%;
+  font-size: 26px;
+}
+
+.f-container a{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fefefe;
+  text-decoration: none;
+  padding: 2% 0;
+  font-size: 20px;
+}

@@ -1,0 +1,24 @@
+{% extends 'settings/base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% endblock %}
+{% block content %}
+    <h1 class="title" id ='t1'>Як отримати картку МаксКепітал?</h1>
+    <div class="main-container">
+        <div class="container">
+            <img src="{% static 'main/img/login-pr.png' %}" alt="">
+            <p>Спочатку необхідно зареєструватись та увійти у власний акаунт. 
+                Це можна зробити <a href="{% url 'login' %}">тут</a>.
+            </p>
+        </div>
+        <div class="container">
+            <img src="{% static 'main/img/cards.png' %}" alt="">
+            <p>
+                Потім оберіть <a href="{% url 'cards' %}">картку</a>, яка найкраще підходить саме для Вас!
+            </p>
+        </div>
+    </div>
+    
+        
+{% endblock %}
